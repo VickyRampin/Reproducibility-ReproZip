@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Research Reproducibility</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Reproducibility in Research</h2><br/>
+					
+					<p>Vicky Steeves | March 20, 2017 </p>
+
+					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><img src="imgs/cds.png" width="30%" height="30%" align="middle" style="padding-left: 50px"><br/>
+					
+					<div class='footer'>
+						<hr/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a><br/>
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+					</div>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<section>
+					<h2>The Problem</h2>
+									
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>	
+				</section> 
+									
+				<!--SLIDE 3-->
+				<section>
+					<h2>Researchers work with a lot of data (hence the big data class...)</h2>
+					
+					<img src="imgs/big-data.png" align="middle">
+					
+					<h3>...but how should it be organized?</h3>
+				
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>	
+				</section>
+
+				<section>
+					<h2>Example: Human Error</h2>
+					
+					<img src="imgs/econ-error.png" width="65%" height="65%" align="middle">
+								
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						This is another example: a more recent case where a very famous economics paper was making wrong conclusions. The paper shows that countries with debt over 90% of their gross domestic product (GDP) have a negative growth rate; this paper was published at the same time that Greece was having an economic crisis. But no one could actually reproduce the conclusions that the authors had – researchers could not replicate the results of the paper. Eventually, researchers from UMass asked the authors for their data spreadsheet, and it turned out that there was a mistake in one of their Excel formulas, where they erroneously excluded 5 countries from their study. If results were made reproducible since the beginning, this mistake would have been discovered way earlier – maybe in time for publication, by reviewers – and which would avoid the bad publicity.
+					</aside>
+				</section>
+				
+				<section>
+					
+					<a href="http://www.newyorker.com/magazine/2016/02/29/the-stem-cell-scandal"><img src="imgs/stem-cell-scandal.png" width="100%%" height="100%" align="middle"></a>
+				
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>State of Reproducibility</h2>
+					
+					<div style="width:40%; float:left;"><p>The majority of federally funded research is NOT reproducible.</p></div>
+					
+					<img src="imgs/reproducibility-stats.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Why Reproducibility?</h2>
+					
+					<div align="right" style="color: #ff5252;"><p>"If I have seen further, it is by standing on the shoulders of giants." - Sir Isaac Newton</p></div>
+
+					<div align="left" style="text-align: left;">
+					<p>To build on top of previous work – science is incremental!</p>
+					<p>To verify the correctness of results</p>
+					<p>To defeat self-deception<sup>1</sup></p>
+					<p>To help newcomers</p>
+					<p>To increase impact, visibility<sup>2</sup> and research quality<sup>3</sup></p></div>
+					
+					<div class='footer' style='font-size:normal;'>
+						<hr/>
+						<ol>
+							<li>http://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517</li>
+							<li>http://infoscience.epfl.ch/record/136640/files/VandewalleKV09.pdf</li>
+							<li>http://www.nature.com/nature/journal/v483/n7391/full/483531a.html</li>
+						</ol>
+					</div>
+					
+
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>	
+				</section>
+					
+				<section>
+					<h2>Challenges of Reproducibility</h2>
+					<h3><span style="color:#4ba173;">Human Error</span> + <span style="color:#ff5252;">Dependency Hell</span></h3>
+					
+					<img src="imgs/human-error.png" width="30%" height="30%" style="float:left;">
+					<ul style="float: left; width:65%;">
+						<li>People make mistakes--and it impacts their research </li>
+						<li>It’s good to have other people check out your data and analyses--it’s like having a copy editor for your data!</li>
+					</ul><br/>
+					
+					<img src="imgs/depend-hell.png" width="30%" height="30%" style="float:right;">
+					<ul style="float: right; width:65%;">
+						<li>It’s <em>hard</em> to keep track of what version of what was used</li>
+						<li>Software get updates, and these changes can disrupt reproducibility</li>
+					</ul>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+					</aside>
+				</section>
+					
+				<section>
+					<h2>Example: Dependency Hell</h2>
+					
+					<p><a href="http://dx.doi.org/10.1371/journal.pone.0038234">The Effects of FreeSurfer Version, Workstation Type, and Macintosh Operating System Version on Anatomical Volume and Cortical Thickness Measurements</a> | June 1, 2012</p>
+					<p><span style="color:#999999;">We investigated the effects of data processing variables such as FreeSurfer version (v4.3.1, v4.5.0, and v5.0.0), workstation (Macintosh and Hewlett-Packard), and Macintosh operating system version (OSX 10.5 and OSX 10.6).</span><strong> Significant differences</strong><span style="color:#999999;"> were revealed between</span> <strong>FreeSurfer version v5.0.0 and the two earlier versions</strong><span style="color:#999999;">. [...] About a factor two smaller differences were detected between</span> <strong>Macintosh and Hewlett-Packard workstations</strong> <span style="color:#999999;">and between</span> <strong>OSX 10.5 and OSX 10.6</strong><span style="color:#999999;">.</span></p>
+
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Reproducibility has a lot of different problems, with many many solutions being pro-offererd -- hence this wonderful programs of events. ReproZip is all about reproducibility at a computational level -- because even if your code or environment is runnable, that doesn’t mean that it is necessarily reproducible. This study from PLOS One evaluated a popular software package in neuroanatomical science. The authors investigated whether or not the effects of data processing variables such as a software version, hardware, and version of OSX affected the results of the same study. They found significant differences within these variables -- OSX 10.5 and 10.6 produced vastly different results from each other.
+					</aside>	
+				</section> 
+				
+				<!--SLIDE 7-->
+				<section>
+					<h2>The Solution</h2>
+													
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<!--SLIDE 8-->
+				<section>
+					<h2>Research Data Management</h2>
+					
+					<img src="imgs/lifecycle.png" style="float:left;">
+					
+					<p><br/>Managing the way data is collected, processed, analyzed, preserved, and published for greater reuse by <span style="color: #f8981d">the community</span> and <span style="color: #f8981d">the original researcher</span>.
+						</p>
+										
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<section>
+					<h2><span style="color:	#57068c;">You can't have any sort of reproducibility without good data and project management.</span></h2>
+					<h3>So let's start with RDM, and go into reproducibility!</h3>
+				</section>
+				
+				<section>			
+					<h2>High-Level View of RDM</h2>
+					
+					<table>
+					  <tr>
+						<th>Data Type</th>
+						<th>Group Roles</th> 
+						<th>Data Storage</th>
+						<th>Data Archiving</th>
+					  </tr>
+					  <tr>
+						<td>format of data to be generated</td>
+						<td>who is primarily responsible for carrying out  RDM? Set group norms</td> 
+						<td>where will you store your data and how will you backup your data?</td>
+						<td>how will you preserve and make your data available to others?</td>
+					  </tr>
+					</table>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<!--SLIDE 11-->
+				<section>			
+					<h2>Documentation</h2>
+
+					<img src="imgs/documentation.png">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<section>			
+					<h2>Storage Rules!</h2>
+					
+					<img src="imgs/321.png" align="middle">
+					
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<!--SLIDE 21-->
+				<section>		
+					<h2>Long Term Storage</h2>
+
+					<table>
+						<tr>
+							<td style="width:50%;">Choose what you want to preserve/get to in the long term, but No matter WHAT, make sure you keep:<br/><br/>
+								<ul><li>documentation (lab/field notebooks, etc.)</li>
+									<li>tools & analysis</li>
+								</ul>
+							</td>
+							
+							<td style="width:50%;">Put your data into an archival format!<br/><br/>
+								<ul><li>this should be open + accessible</li>
+									<li>Software agnostic</li>
+								</ul>
+							</td>
+					</table>
+					
+					<img src="imgs/archivalFormats.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>	
+				
+				<section>		
+					<h2>The New Traditional Model</h2>
+					
+					<ul>
+						<li>Publish a paper.</li>
+						<li>Publish the underlying code and data.</li>
+						<li>Link the paper + code/data.</li>
+						<li>Bump up your H-Index.</li>
+					</ul><br/>
+
+					<img src="imgs/data-citations.png" width="50%" height="50%" align="middle">
+					
+					<p>And I have slides on that model <a href="https://github.com/VickySteeves/GitHub-OSF-OpenResearch">here</a> and <a href="https://github.com/VickySteeves/DataScience-Citation-Workshop">here</a>.</p>
+					
+				</section>
+				
+				<section>
+					<h2>But the article, code, and data are really just the tip of the iceburg</h2>
+					<img src="imgs/repro-pyramid.png" width="50%" height="50%" align="middle">
+				</section>
+				
+				<section>
+					<h2><span style="color:	#57068c;">But what if I told you that you could put code + data + analysis + environment in one small file?</span></h2>
+					<p>This means ONE file to share with each paper to ensure full reproducibility, verifibility, and authenticity of your research!</p>
+				</section>
+				
+				<section>
+					<h2>Tool to Help: ReproZip!</h2>
+					
+					<p>Here comes ReproZip, the reproducibility packer! ReproZip is a tool aimed at simplifying the process of creating reproducible experiments.</p>
+					
+					<img src="imgs/reprozip-desc.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						So here comes ReproZip to help!  ReproZip is a tool that automatically captures provenance of experiments and packs all the necessary ﬁles, library dependencies, and variables to reproduce the results. Reviewers can then unpack and run the experiments without having to install any additional software. 
+					</aside>
+				</section>
+					
+				<section>
+					<h2>2 Steps to Reproducibility</h2>
+					<img src="imgs/reprozip-eco.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						This graphic just shows some of the explicit steps involved in making and unpacking a reproducible package. The left shows the first step, packing. Here the original researcher uses reprozip trace, runs their experiment, and at the conclusion simply packs it into the single package. They can then send that package to colleagues or reviewers, or store it as an archival snapshot.
+
+						In the unpacking step, the reviewer or collaborator would load in the rpz, optionally upload their own input files to the environment, and reproduce the experiment. They have the option to download the output files for further inspection, and then destroy the VM or container.
+
+						While ReproZip is written in python, it packs experiments and environments regardless of language by systematically tracking and keeping a record of programs, libraries, and file accesses
+
+						From there it creates a single reproducible package, a .rpz file from that captured information.  
+
+						Others can then unpack the rpz file using ReproUnzip on another machine regardless of configuration or OS. During the unpacking step, users have easy access to various unpackers, including vagrant and docker, to make reproduction simpler. 
+
+						I also wanted to mention that reprozip has the ability to pack graphical tools,  client-server environments, databases,  and interactive experiments. 
+
+						Automatically and systematically captures the provenance of an existing experiment (Linux only) 
+							Language-independent approach and solution
+
+						Creates a self-contained reproducible package from captured provenance
+
+						Extracts package in another environment, independent of the operating system
+
+						Provides easy-to-use interfaces for replicating and varying the original configuration of the experiment
+
+						Packs graphical tools, interactive environments, databases, client-server set-ups
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Step 1: Packing</h2>
+					<img src="imgs/rz-pack-4.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						I'll show this a bit more explicitly. Right now, Reprozip can only pack experiments and environments from Linux. So we start with this computational environment.  Then the researchers runs the experiment under reprozip trace. Reprozip then traces and records the execution of the experiment. 
+
+						We use some heuristics (a set of rules that normally work) for detecting files:
+							Input Files: files that are only read, do not belong to any software package and are not executable + files mentioned on command line
+							Log Files: files that are read and written afterwards (logs, database files, etc.)
+							Output files: files that are only written to
+						
+						Reprozip then creates a configuration file that lists the files to be packed so the researcher can add or remove files that they know need to be packed or not. He should be wary of privacy and copyright issues when going over the list. 
+						All the files are packed in the same structure they are found in the original environment. The output is a single reproducible rpz file.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Step 1: Tracing</h2>
+				</section>
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/gs4s2JH8Yw4" frameborder="0" allowfullscreen></iframe>
+				</section>
+				
+				<section>
+					<h2>Step 1b: Packing</h2>
+				</section>		
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/Qit9sYVHsnY" frameborder="0" allowfullscreen></iframe>
+				</section>
+					
+				<section>
+					<h2>Step 2: Unpacking</h2>
+					<img src="imgs/ruz-unpack-1.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Now that we have an rpz file, we can unpack it in any OS.
+						
+						Then we can run the unpacker we like. There are four unpackers currently available.
+
+						The first is the directory unpacker (reprounzip directory) allows users to unpack the entire experiment (including library dependencies) in a single directory, and to reproduce the experiment directly from that directory. It does so by automatically altering environment variables (e.g.: PATH, HOME, and LD_LIBRARY_PATH) and the command line to point the experiment execution to the created directory, which has the same structure as in the packing environment. This is unreliable if the application cannot be trusted, since it can point outside the unpacked directory. Hardcoded paths for example will still hit outside that directory.
+
+						The next is the chroot unpacker (reprounzip chroot), similar to reprounzip directory, a directory is created from the experiment package; however, a full system environment is also built, which can then be run with chroot(2), a Linux mechanism that changes the root directory / for the experiment to the experiment directory. Therefore, this unpacker addresses the limitation of the directory unpacker and does not fail in the presence of hardcoded absolute paths. Note as well that it does not interfere with the current environment since the experiment is isolated in that single directory. Although chroot offers pretty good isolation, it is not considered completely safe: malicious experiments might still escape to the host environment.
+
+						Third, the vagrant unpacker (reprounzip vagrant) allows an experiment to be unpacked and reproduced using a virtual machine created through Vagrant. Therefore, the experiment can be reproduced in any environment supported by this tool, i.e., Linux, Mac OS X, and Windows.
+
+						Lastly, ReproUnzip can extract and reproduce experiments as Docker containers. The docker unpacker (reprounzip docker) is responsible for such integration. Docker implements a high-level API to provide lightweight containers that run processes in isolation. A Docker container, as opposed to a traditional virtual machine, does not require or include a separate operating system. Instead, it relies on the kernel's functionality and uses resource isolation (CPU, memory, block I/O, network, etc.) and separate namespaces to isolate the application's view of the operating system, and is thus lighter and faster.
+
+						ReproZip also allows users to generate a provenance graph related to the experiment execution by reading the metadata available in the .rpz package. This graph shows the experiment runs as well as the files and other dependencies they access during execution; this is particularly useful to visualize and understand the dataflow of the experiment.
+
+						There is also a VisTrails plugin that creates a VisTrails workflow, that can be used to run the experiment in VisTrails.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Step 2: Setting Up</h2>
+				</section>
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/YwLipnvvEQA" frameborder="0" allowfullscreen></iframe>
+				</section>	
+				
+				<section>
+					<h2>Step 2a: Running</h2>
+				</section>
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/uRBDYLuBfjM" frameborder="0" allowfullscreen></iframe>
+				</section>	
+				
+				<section>
+					<h2>Optional Step:<br/> Downloading Outputs</h2>
+				</section>
+				
+				<section>
+					<iframe class="stretch"src="https://www.youtube.com/embed/ebuOcY4THVM" frameborder="0" allowfullscreen></iframe>
+				</section>	
+				
+				<section>
+					<h2>Optional Step:<br/> Uploading Inputs</h2>
+				</section>
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/G919J2fptE0" frameborder="0" allowfullscreen></iframe>
+				</section>	
+					
+				<section>
+					<h2>Bonus Demo Time:<br/> Jupyter Notebooks</h2>
+				</section>	
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/Scpiq5NvdZc" frameborder="0" allowfullscreen></iframe>
+				</section>
+				
+				<section>
+					<iframe class="stretch" src="https://www.youtube.com/embed/dfHefVD1-Fk" frameborder="0" allowfullscreen></iframe>
+				</section>	
+
+				<section>
+					<h2>Keepin' Up With Reproducibility</h2>
+					
+					<p>There are many resources you can take advantage of to stay informed on reproducibility initiatives, resources, and studies!</p>
+					
+					<ul>
+						<li><a href="https://twitter.com/ReproFeed">Reproducibility Twitter Feed</a></li>
+						<li><a href="https://reproduciblescience.org/">ReproducibleScience.org</a></li>
+						<ul><li><a href="https://reproduciblescience.org/nyu">ReproducibleScience.org/NYU</a></li></ul>
+						<li><a href="http://guides.nyu.edu/data_management/script_reproducibility">Reproducibility LibGuide</a></li>
+					</ul>
+										
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<!-- CONCLUSION SLIDE -->
+				<section>
+					<h2>Thank you! Questions?</h2><br/>
+					
+					<p>Email me: <a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a></p>
+					<p>Make an appointment: <a href="http://guides.nyu.edu/appointment">guides.nyu.edu/appointment</a></p>
+				
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+							// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
