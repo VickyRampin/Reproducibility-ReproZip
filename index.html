@@ -27,29 +27,20 @@
 				<section>
 					<h2>Reproducibility in Research</h2><br/>
 					
-					<p>Vicky Steeves | March 20, 2017 </p>
+					<p><span style="color:#ff5252;">Vicky Steeves</span>, <span style="color:#ff5252;">Remi Rampin</span></p>
+   				 <p>Presentation: <a href="https://vickysteeves.gitlab.io/Reproducibility-ReproZip">vickysteeves.gitlab.io/Reproducibility-ReproZip</a></p>
+   				 <p>October 20, 2017</p>
 
-					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><img src="imgs/cds.png" width="30%" height="30%" align="middle" style="padding-left: 50px"><br/>
 					
 					<div class='footer'>
 						<hr/>
 						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a><br/>
 						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 					</div>
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 				
 				<section>
 					<h2>The Problem</h2>
-									
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>	
 				</section> 
 									
 				<!--SLIDE 3-->
@@ -58,12 +49,14 @@
 					
 					<img src="imgs/big-data.png" align="middle">
 					
-					<h3>...but how should it be organized?</h3>
-				
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>	
+					<h3>...but how should it be organized & reproduced?</h3>
+				</section>
+
+				<section>
+						<h2>And code...</h2>
+
+						<img src="imgs/phd-comics.png" align="middle" class="stretch">
+
 				</section>
 
 				<section>
@@ -86,80 +79,6 @@
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
 				</section>
-
-				<section>
-					<h2>State of Reproducibility</h2>
-					
-					<div style="width:40%; float:left;"><p>The majority of federally funded research is NOT reproducible.</p></div>
-					
-					<img src="imgs/reproducibility-stats.png" align="middle">
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Why Reproducibility?</h2>
-					
-					<div align="right" style="color: #ff5252;"><p>"If I have seen further, it is by standing on the shoulders of giants." - Sir Isaac Newton</p></div>
-
-					<div align="left" style="text-align: left;">
-					<p>To build on top of previous work – science is incremental!</p>
-					<p>To verify the correctness of results</p>
-					<p>To defeat self-deception<sup>1</sup></p>
-					<p>To help newcomers</p>
-					<p>To increase impact, visibility<sup>2</sup> and research quality<sup>3</sup></p></div>
-					
-					<div class='footer' style='font-size:normal;'>
-						<hr/>
-						<ol>
-							<li>http://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517</li>
-							<li>http://infoscience.epfl.ch/record/136640/files/VandewalleKV09.pdf</li>
-							<li>http://www.nature.com/nature/journal/v483/n7391/full/483531a.html</li>
-						</ol>
-					</div>
-					
-
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>	
-				</section>
-					
-				<section>
-					<h2>Challenges of Reproducibility</h2>
-					<h3><span style="color:#4ba173;">Human Error</span> + <span style="color:#ff5252;">Dependency Hell</span></h3>
-					
-					<img src="imgs/human-error.png" width="30%" height="30%" style="float:left;">
-					<ul style="float: left; width:65%;">
-						<li>People make mistakes--and it impacts their research </li>
-						<li>It’s good to have other people check out your data and analyses--it’s like having a copy editor for your data!</li>
-					</ul><br/>
-					
-					<img src="imgs/depend-hell.png" width="30%" height="30%" style="float:right;">
-					<ul style="float: right; width:65%;">
-						<li>It’s <em>hard</em> to keep track of what version of what was used</li>
-						<li>Software get updates, and these changes can disrupt reproducibility</li>
-					</ul>
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-					</aside>
-				</section>
-					
-				<section>
-					<h2>Example: Dependency Hell</h2>
-					
-					<p><a href="http://dx.doi.org/10.1371/journal.pone.0038234">The Effects of FreeSurfer Version, Workstation Type, and Macintosh Operating System Version on Anatomical Volume and Cortical Thickness Measurements</a> | June 1, 2012</p>
-					<p><span style="color:#999999;">We investigated the effects of data processing variables such as FreeSurfer version (v4.3.1, v4.5.0, and v5.0.0), workstation (Macintosh and Hewlett-Packard), and Macintosh operating system version (OSX 10.5 and OSX 10.6).</span><strong> Significant differences</strong><span style="color:#999999;"> were revealed between</span> <strong>FreeSurfer version v5.0.0 and the two earlier versions</strong><span style="color:#999999;">. [...] About a factor two smaller differences were detected between</span> <strong>Macintosh and Hewlett-Packard workstations</strong> <span style="color:#999999;">and between</span> <strong>OSX 10.5 and OSX 10.6</strong><span style="color:#999999;">.</span></p>
-
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Reproducibility has a lot of different problems, with many many solutions being pro-offererd -- hence this wonderful programs of events. ReproZip is all about reproducibility at a computational level -- because even if your code or environment is runnable, that doesn’t mean that it is necessarily reproducible. This study from PLOS One evaluated a popular software package in neuroanatomical science. The authors investigated whether or not the effects of data processing variables such as a software version, hardware, and version of OSX affected the results of the same study. They found significant differences within these variables -- OSX 10.5 and 10.6 produced vastly different results from each other.
-					</aside>	
-				</section> 
 				
 				<!--SLIDE 7-->
 				<section>
@@ -288,6 +207,44 @@
 				</section>
 				
 				<section>
+						<h2 style="margin-bottom:0px">Challenge: Environments are Hard to Capture</h2>
+
+						<img src="imgs/dependecy-hell.png" height="80%" width="80%">
+
+						<p style="color:#4ba173; margin-top:0px;"><span style="text-decoration:underline">Gap</span>: tools that can automatically capture all the dependencies in the original environment and automatically set them up in another environment.</p>
+						
+				</section>
+
+				<section>
+						<h3>Even if runnable, results may differ</h3>
+
+						<p><a href="http://dx.doi.org/10.1371/journal.pone.0038234">The Effects of FreeSurfer Version, Workstation Type, and Macintosh Operating System Version on Anatomical Volume and Cortical Thickness Measurements</a> | June 1, 2012</p>
+						<p><span style="color:#999999;">We investigated the effects of data processing variables such as FreeSurfer version (v4.3.1, v4.5.0, and v5.0.0), workstation (Macintosh and Hewlett-Packard), and Macintosh operating system version (OSX 10.5 and OSX 10.6).</span><strong> Significant differences</strong><span style="color:#999999;"> were revealed between</span> <strong>FreeSurfer version v5.0.0 and the two earlier versions</strong><span style="color:#999999;">. [...] About a factor two smaller differences were detected between</span> <strong>Macintosh and Hewlett-Packard workstations</strong> <span style="color:#999999;">and between</span> <strong>OSX 10.5 and OSX 10.6</strong><span style="color:#999999;">.</span></p>
+				</section>
+				
+					<section>
+					<h2>Why Reproducibility?</h2>
+					
+					<div align="right" style="color: #ff5252;"><p>"If I have seen further, it is by standing on the shoulders of giants." - Sir Isaac Newton</p></div>
+
+					<div align="left" style="text-align: left;">
+					<p>To build on top of previous work – science is incremental!</p>
+					<p>To verify the correctness of results</p>
+					<p>To defeat self-deception<sup>1</sup></p>
+					<p>To help newcomers</p>
+					<p>To increase impact, visibility<sup>2</sup> and research quality<sup>3</sup></p></div>
+					
+					<div class='footer' style='font-size:normal;'>
+						<hr/>
+						<ol>
+							<li>http://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517</li>
+							<li>http://infoscience.epfl.ch/record/136640/files/VandewalleKV09.pdf</li>
+							<li>http://www.nature.com/nature/journal/v483/n7391/full/483531a.html</li>
+						</ol>
+					</div>
+				</section>
+				
+				<section>
 					<h2><span style="color:	#57068c;">But what if I told you that you could put code + data + analysis + environment in one small file?</span></h2>
 					<p>This means ONE file to share with each paper to ensure full reproducibility, verifibility, and authenticity of your research!</p>
 				</section>
@@ -304,6 +261,35 @@
 						So here comes ReproZip to help!  ReproZip is a tool that automatically captures provenance of experiments and packs all the necessary ﬁles, library dependencies, and variables to reproduce the results. Reviewers can then unpack and run the experiments without having to install any additional software. 
 					</aside>
 				</section>
+				
+				<section>
+    <h2>ReproZip tries to solve...</h2>
+        <p style="text-align:left;"><span style="color:#4ba173;">Workload &amp; Time Challenges</span><br/>It is a time commitment to get data and code ready to share, and to share it</p>
+
+        <p>Otherwise known as...</p>
+
+        <p style="text-align:left"><span style="color:#ff5252;">the Incentive Problem</span><br/>Reproducibility takes time, and is not always valued by the academic reward structure</p>
+
+        <span class="fragment fade-in">
+            <p style="float: left; width:50%; border: 1px black solid;"><strong>"Insufficient time is the main reason why scientists do not make their data and experiment available and reproducible."</strong><br/>Carol Tenopir, Beyond the PDF2 Conference</p>
+            <p style="float: right; width:48%; border: 1px black solid;"><strong>"77% claim that they do not have time to document and clean up the code."</strong><br/>Victoria Stodden, Survey of the Machine Learning Community – NIPS 2010</p>
+        </span>
+
+</section>
+
+<section>
+    <h2>ReproZip tries to solve...</h2>
+        <p style="text-align:left;"><span style="color:#4ba173;">Technical Obsolescence</span><br/>Technology changes affect the reproducibility</p>
+        <p style="text-align:left;"><span style="color:#4ba173;">Normative Dissonance<sup>1</sup></span><br/>Espoused values don’t always match practice</p>
+
+        <p>Otherwise known as...</p>
+
+        <p style="text-align:left"><span style="color:#ff5252;">the Pipeline Problem</span><br/>Reproducibility requires skills that are not included in most curriculums!</p>
+
+        <p class="fragment fade-in" style="border: 1px black solid;"><strong>"It would require huge amount of effort to make our code work with the latest versions of these tools."</strong><br/>Collberg et al., Repeatability and Benefaction in Computer Systems Research, University of Arizona TR 14-04</p>
+
+        <p style="font-size:small;"><sup>1</sup><a href="https://www.ncbi.nlm.nih.gov/pubmed/19385804">https://www.ncbi.nlm.nih.gov/pubmed/19385804</a></p>
+</section>
 					
 				<section>
 					<h2>2 Steps to Reproducibility</h2>
@@ -431,8 +417,14 @@
 				</section>	
 				
 				<section>
-					<iframe class="stretch" src="https://www.youtube.com/embed/Scpiq5NvdZc" frameborder="0" allowfullscreen></iframe>
-				</section>
+<code><pre>
+pip install reprozip-jupyter
+jupyter nbextension install --py reprozip_jupyter --user
+jupyter nbextension enable --py reprozip_jupyter --user
+jupyter serverextension enable --py reprozip_jupyter --user
+</code></pre>
+    <iframe class="stretch" src="https://www.youtube.com/embed/Y8YmGVYHhS8?autoplay=0&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+</section>
 				
 				<section>
 					<iframe class="stretch" src="https://www.youtube.com/embed/dfHefVD1-Fk" frameborder="0" allowfullscreen></iframe>
@@ -449,25 +441,23 @@
 						<ul><li><a href="https://reproduciblescience.org/nyu">ReproducibleScience.org/NYU</a></li></ul>
 						<li><a href="http://guides.nyu.edu/data_management/script_reproducibility">Reproducibility LibGuide</a></li>
 					</ul>
-										
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 				
 				<!-- CONCLUSION SLIDE -->
 				<section>
-					<h2>Thank you! Questions?</h2><br/>
-					
-					<p>Email me: <a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a></p>
-					<p>Make an appointment: <a href="http://guides.nyu.edu/appointment">guides.nyu.edu/appointment</a></p>
+    <div style="float: left; width:50%;">
+        <h3><strong>Thank You:</strong></h3>
+        <p><span style="color:#ff5252;">Prof. Juliana Freire</span>, ReproZip PI.</p>
+        <p><span style="color:#ff5252;">The Gordon and Betty Moore Foundation &amp; the Alfred P. Sloan Foundation</span>, who support The Moore-Sloan Data Science Environment at NYU, which was vital to the development of ReproZip.</p>
+    </div>
+
+    <div style="float: right; width:49%;">
+        <h3><strong>Questions?</strong></h3>
+        <p>Get this Presentation: <a href="https://vickysteeves.gitlab.io/2017-SciPy">vickysteeves.gitlab.io/2017-SciPy</a></p>
+        <p>Email us:<br/><a href="mailto:reprozip-users@vgc.poly.edu">users@reprozip.org</a><br/>or<br/><a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a><br/>or<br/><a href="mailto:remi.rampin@nyu.edu">remi.rampin@nyu.edu</a></p>
+    </div>
+</section>
 				
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
 			</div>
 		</div>
 
